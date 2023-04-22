@@ -33,7 +33,7 @@ public class Test {
 
 
     @org.junit.Test
-    public void pigu2() {
+    public void pigu() {
         // Registracija.ieiti();
         Pigu.loginWindown();
     }

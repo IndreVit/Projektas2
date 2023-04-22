@@ -45,7 +45,7 @@ public class Registracija {
         }
     }
 
-    public static void forma() throws InterruptedException {
+    public static void forma()  {
         WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             WebElement email = driver.findElement(By.xpath("//*[@id=\"registrationEmail\"]"));

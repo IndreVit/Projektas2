@@ -34,7 +34,7 @@ public class TestPage {
 
 
     @Test
-    public void registracija2() throws InterruptedException {
+    public void registracija2()  {
         Registracija.ieiti();
         Registracija.registruotis();
         Registracija.forma();
