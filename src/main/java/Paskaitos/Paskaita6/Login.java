@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Login {
-   // private static final By login1 = By.xpath("/html/body/div[2]/div[2]/div/div/div[1]/div/div[1]/div/a[1]");
+   private static final By login1 = By.cssSelector("div:nth-of-type(2) > a[role='button']");
 
-    //private static final By loginEmailField = By.xpath("//input[@id=\"loginEmail\"]");
-    private static final By password = By.xpath("/html/body/div[2]/div[2]/div/div/div[1]/div/div[2]/div[1]/form/div[3]/div/input[2]");
-    private static final By btn = By.xpath("/html/body/div[2]/div[2]/div/div/div[1]/div/div[2]/div[1]/form/footer/div/button");
+    private static final By loginEmailField = By.cssSelector("input#loginEmail");
+    private static final By password = By.cssSelector("form[name='login_form'] > div:nth-of-type(3) > .form-control.form-control--float.form-control--input > input:nth-of-type(2)");
+    private static final By btn = By.cssSelector("[data-ajax-form-success-redirect-url] button");
     private static WebDriver driver;
     //private final By login = By.id("auth-login-tab");
 
@@ -28,24 +28,12 @@ public class Login {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             Thread.sleep(3000);
-            //WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(login1));
-            //WebElement login = driver.findElement(By.xpath("//*[@id=\"auth-login-tab\"]"));
-           // wait.until(ExpectedConditions.visibilityOfElementLocated((By) login));
-            //login.click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(login1)).click();
 
-//            Thread.sleep(3000);
-//            WebElement gmailIcon = driver.findElement(By.xpath("//*[@id=\"auth-login-panel\"]/div/div/div/a[2]"));
-//            gmailIcon.click();
 
-//WebElement addProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(addToCart));
-//            WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmailField));
-//            //wait.until(ExpectedConditions.visibilityOfElementLocated((By) email));
-//            Thread.sleep(3000);
-//            email.sendKeys("labas@lalalallala.lt");
+            Thread.sleep(3000);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmailField)).sendKeys("labas@lalalallala.lt");
 
-            WebElement email = driver.findElement(By.xpath("//*[@id=\"loginEmail\"]")); // you can use any locator
-            JavascriptExecutor jse = (JavascriptExecutor)driver;
-            jse.executeScript("arguments[0].value='labas@lalalallala.lt';", email);
 
             Thread.sleep(3000);
             //WebElement pass = driver.findElement(By.id("loginPassword"));
