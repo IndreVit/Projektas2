@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-//paveldi basepage pigu klases savybes
+//paveldi basepagepigu klases savybes
 public class PrisijungimasPigu extends BasePagePigu {
 
     //apsirasome savo savybes
@@ -33,7 +33,7 @@ public class PrisijungimasPigu extends BasePagePigu {
     private static final By prisijungti = By.cssSelector("input[name='login']");
 
 
-    //reikia konstruktoriaus
+    //sukuriu konstruktoriu
 
     public PrisijungimasPigu(WebDriver driver) {
         //super reikia, kad galetume panaudoti savybe
@@ -65,7 +65,7 @@ public class PrisijungimasPigu extends BasePagePigu {
 //        driver.get("https://pigu.lt/lt/");
 //    }
 
-    //metodas registruotis
+    //susikuriu metoda registracija, kur apsirasau savo norimas savybes
     public static void registracija() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         try {

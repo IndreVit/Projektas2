@@ -10,12 +10,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class MegstamiausiPigu extends PrisijungimasPigu {
+public class MegstamiausiPigu extends BasePagePigu {
     private static final By paieska = By.cssSelector("input#searchInput");
     private static final By sirdutePrekes1 = By.cssSelector (".contain-button.product-block-67349619.product-item-55767659.product-list-item.tag-top .product-item__badges-item.wishlist > .add-to-favorites");
     private static final By megstamiausi = By.cssSelector("li:nth-of-type(3) > a > .c-icon--heart-line");
     private static final By sirdutePrekes2 = By.cssSelector(".contain-button.product-block-19494610.product-item-20194755.product-list-item.tag-top .product-item__badges-item.wishlist > .add-to-favorites");
 
+
+    //konstruktorius
     public MegstamiausiPigu(WebDriver driver) {
         //super reikia, kad galetume panaudoti savybe
         super(driver);

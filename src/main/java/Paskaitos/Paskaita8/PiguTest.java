@@ -13,6 +13,7 @@ import java.time.Duration;
 
 
 public class PiguTest {
+    private static BasePagePigu basePagePigu;
     private static PrisijungimasPigu prisijungimasPigu;
     private static MegstamiausiPigu megstamiausiPigu;
     private static WebDriver driver;
@@ -23,17 +24,8 @@ public class PiguTest {
         driver = new ChromeDriver();
 
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        WebDriver driver = new ChromeDriver(options);
-
-
-        //laukiama, kol visi elementai bus uzkrauti
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-
         //objektas
-        prisijungimasPigu = new PrisijungimasPigu(driver);
+       basePagePigu = new BasePagePigu(driver);
     }
 
 
