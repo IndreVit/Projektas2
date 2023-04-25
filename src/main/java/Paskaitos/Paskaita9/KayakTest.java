@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+//extenda darome su base klase, nes home neturi jokiu savybiu
+
 public class KayakTest extends KayakBase {
     //turime pasiimti klases, kad galetume pasiekti tuos metodus
     private KayakHome kayakHome;

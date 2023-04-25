@@ -24,8 +24,8 @@ public class Studentas extends Zmogus {
         return universitetas;
     }
 
-//    public static void main (String[]args){
-//        Studentas studentas = new Studentas("Petras",25,"ISM");
-//        System.out.println("Vardas: " + studentas.getVardas() + "\nAmzius: " + studentas.getAmzius() + "\nUniversitetas: " + studentas.getUniversitetas());
-//    }
+    public static void main (String[]args){
+        Studentas studentas = new Studentas("Petras",25,"ISM");
+        System.out.println("Vardas: " + studentas.getVardas() + "\nAmzius: " + studentas.getAmzius() + "\nUniversitetas: " + studentas.getUniversitetas());
+    }
 }

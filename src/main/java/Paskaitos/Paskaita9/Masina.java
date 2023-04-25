@@ -3,7 +3,7 @@ package Paskaitos.Paskaita9;
 public class Masina extends Transportas{
 
     //savybe
-    int dureliuSkaicius;
+   private static int dureliuSkaicius;
 
     //konstruktorius
     public Masina(String marke, String modelis, int metai, int dureliuSkaicius){
@@ -14,7 +14,7 @@ public class Masina extends Transportas{
 
 
     //metodas
-    public int getDureliuSkaicius(){
+    public static int getDureliuSkaicius(){
         return dureliuSkaicius;
     }
 }

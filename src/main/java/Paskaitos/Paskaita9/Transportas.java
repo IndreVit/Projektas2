@@ -7,9 +7,10 @@ package Paskaitos.Paskaita9;
 public class Transportas {
 
     //apsirasome savybes
-    String marke;
-    String modelis;
-    int metai;
+    //savybes apsirasome kaip private
+    private static String marke;
+   private static String modelis;
+   private static int metai;
 
 
     //apsirasome konstruktoriu
@@ -20,15 +21,15 @@ public class Transportas {
     }
 
     //metodas
-    public String getMarke() {
+    public static String getMarke() {
         return marke;
     }
 
-    public String getModelis(){
+    public static String getModelis(){
         return modelis;
     }
 
-    public int getMetai(){
+    public static int getMetai(){
         return metai;
     }
 }
